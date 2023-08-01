@@ -1,10 +1,19 @@
 package step.learning;
 
+import step.learning.basics.ArraysLoops;
+import step.learning.basics.Collections;
+import step.learning.basics.Variables;
+import step.learning.tictactoe.TicTacToe;
+
 public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        // new Variables().demo();
+        // new ArraysLoops().demo();
+        new Collections().demo();
+        TicTacToe game = new TicTacToe();
+        game.startGame();
     }
 }
 /* Інсталяція
