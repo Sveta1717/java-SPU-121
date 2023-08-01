@@ -116,29 +116,29 @@ public class TicTacToe {
                     displayBoard();
                     switchPlayer();
                 } else {
-                    System.out.println(ConsoleColors.RED + "Неправільний хід! .");
+                    System.out.println(ConsoleColors.RED + "Невірний хід! .");
                 }
             }
 
             if (checkWin(PLAYER_X)) {
-                System.out.println(ConsoleColors.YELLOW  + "Player X wins!");
+                System.out.println(ConsoleColors.YELLOW  + "Гравець X виграв!");
                 playerXWins++;
             } else if (checkWin(PLAYER_O)) {
-                System.out.println(ConsoleColors.YELLOW  + "Player O wins!");
+                System.out.println(ConsoleColors.YELLOW  + "Гравець O виграв!");
                 playerOWins++;
             } else {
-                System.out.println("It's a draw!");
+                System.out.println("Нічия!");
             }
             System.out.print(ConsoleColors.RESET);
 
             totalGames++;
-            System.out.println(ConsoleColors.GREEN  + "Do you want to play again? (yes/no)");
+            System.out.println(ConsoleColors.GREEN  + "Бажаєте зіграти ще? (так-1/ні-2)");
             String playAgainInput = scanner.next().toLowerCase();
-            playAgain = playAgainInput.equals("yes");
+            playAgain = playAgainInput.equals("1");
         }
 
         scanner.close();
-        System.out.println(ConsoleColors.BLUE + "Game over!");
+        System.out.println(ConsoleColors.BLUE + "Гру закінчено!");
         printStats();
     }
 
