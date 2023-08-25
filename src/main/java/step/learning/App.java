@@ -3,6 +3,7 @@ package step.learning;
 import step.learning.basics.ArraysLoops;
 import step.learning.basics.Collections;
 import step.learning.basics.Variables;
+import step.learning.oop.library;
 import step.learning.tictactoe.TicTacToe;
 
 public class App
@@ -11,9 +12,11 @@ public class App
     {
         // new Variables().demo();
         // new ArraysLoops().demo();
-        new Collections().demo();
-        TicTacToe game = new TicTacToe();
-        game.startGame();
+        // new Collections().demo();
+        // TicTacToe game = new TicTacToe();
+        // game.startGame();
+        new library().demo();
+
     }
 }
 /* Інсталяція
