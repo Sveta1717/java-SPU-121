@@ -1,10 +1,9 @@
 package step.learning;
 
-import step.learning.basics.ArraysLoops;
-import step.learning.basics.Collections;
-import step.learning.basics.Variables;
-import step.learning.oop.library;
-import step.learning.tictactoe.TicTacToe;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import step.learning.db.DbApp;
+import step.learning.ioc.ConfigModule;
 
 public class App
 {
@@ -15,7 +14,12 @@ public class App
         // new Collections().demo();
         // TicTacToe game = new TicTacToe();
         // game.startGame();
-        new library().demo();
+        //new library().demo();
+
+        Injector injector = Guice.createInjector(new ConfigModule());
+        injector.getInstance( DbApp.class).demo();
+
+
 
     }
 }
